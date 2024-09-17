@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Lista de Autos</title>
+</head>
+<body>
+    <h1>Lista de Autos</h1>
+    <table border="1">
+        <tr>
+            <th>ID Tipo Auto</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Descripción</th>
+            <th>Precio Unitario</th>
+            <th>Cantidad</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
+        </tr>
+        {% for car in cars %}
+        <tr>
+            <td>{{ car.idTipoAuto }}</td>
+            <td>{{ car.marca }}</td>
+            <td>{{ car.modelo }}</td>
+            <td>{{ car.descripcion }}</td>
+            <td>{{ car.precioUnitario }}</td>
+            <td>{{ car.cantidad }}</td>
+            <td><img src="{{ car.imagen }}" alt="Imagen del auto" width="100"></td>
+            <td>
+                <form method="post" action="{{ url_for('delete_car', index=loop.index0) }}">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('register_car') }}">Registrar nuevo auto</a>
+    <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+</body>
+</html>

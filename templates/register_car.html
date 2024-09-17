@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Registrar Auto</title>
+</head>
+<body>
+    <h1>Registrar Auto</h1>
+    <form method="post">
+        <label for="idTipoAuto">ID Tipo Auto:</label>
+        <input type="number" id="idTipoAuto" name="idTipoAuto" required>
+        <br>
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" required>
+        <br>
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" required>
+        <br>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+        <br>
+        <label for="precioUnitario">Precio Unitario (Q):</label>
+        <input type="number" id="precioUnitario" name="precioUnitario" step="0.01" required>
+        <br>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required>
+        <br>
+        <label for="imagen">Imagen URL:</label>
+        <input type="text" id="imagen" name="imagen">
+        <br>
+        <button type="submit">Registrar</button>
+    </form>
+    <a href="{{ url_for('cars_list') }}">Ver lista de autos</a>
+</body>
+</html>

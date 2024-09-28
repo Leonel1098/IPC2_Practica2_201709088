@@ -12,48 +12,52 @@
                 <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
                     <div class="form-container">
                         <h3 class="title">Registrar Auto</h3>
-                        <form class="form-horizontal" method="POST" action="{{ url_for('register_car') }}">
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                <div class="flash-messages">
+                                    {% for message in messages %}
+                                        <div class="alert alert-info">{{ message }}</div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        {% endwith %}
+
+                        <form class="form-horizontal" method="POST" action="{{ url_for('registro_Auto') }}">
                             <div class="form-icon">
                                 <i class="fa fa-user-circle"></i>
                             </div>
-                            <!-- Campo ID Tipo Auto -->
                             <div class="form-group">
                                 <span class="input-icon"><i class="fa fa-car"></i></span>
                                 <input type="number" name="idTipoAuto" class="form-control" placeholder="ID Tipo Auto" required>
                             </div>
-                            <!-- Campo Marca -->
                             <div class="form-group">
                                 <span class="input-icon"><i class="fa fa-car"></i></span>
                                 <input type="text" name="marca" class="form-control" placeholder="Marca" required>
                             </div>
-                            <!-- Campo Modelo -->
                             <div class="form-group">
                                 <span class="input-icon"><i class="fa fa-car"></i></span>
                                 <input type="text" name="modelo" class="form-control" placeholder="Modelo" required>
                             </div>
-                            <!-- Campo Descripción -->
                             <div class="form-group">
                                 <span class="input-icon"><i class="fa fa-pencil"></i></span>
                                 <textarea id="descripcion" name="descripcion" class="form-control" placeholder="Descripción" required></textarea>
                             </div>
-                            <!-- Campo Precio Unitario -->
                             <div class="form-group">
                                 <span class="input-icon"><i class="fa fa-money"></i></span>
                                 <input type="number" name="precioUnitario" class="form-control" placeholder="Precio Unitario Q" required>
                             </div>
-                            <!-- Campo Cantidad -->
                             <div class="form-group">
                                 <span class="input-icon"><i class="fa fa-cubes"></i></span>
                                 <input type="number" name="cantidad" class="form-control" placeholder="Cantidad" required>
                             </div>
-                            <!-- Campo Imagen URL -->
                             <div class="form-group">
                                 <span class="input-icon"><i class="fa fa-image"></i></span>
                                 <input type="text" name="imagen" class="form-control" placeholder="Imagen URL" required>
                             </div>
                             <button class="btn signin" type="submit">Registrar Auto</button>
                         </form>
-                        <a href="{{ url_for('cars_list') }}">Ver lista de autos</a>
+
+                        <a href="{{ url_for('lista_Autos') }}">Ver lista de autos</a>
                     </div>
                 </div>
             </div>

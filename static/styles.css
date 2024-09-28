@@ -1,9 +1,11 @@
+/*Esta parte se encarga de darle estilo al contenedor del login*/
 .form-container {
     background: linear-gradient(150deg, #1B394D 33%, #2D9DA7 34%, #2D9DA7 66%, #EC5F20 67%);
     font-family: 'Raleway', sans-serif;
     text-align: center;
     padding: 30px 20px 50px;
 }
+/*Da estilos al titulo del formulario*/
 .form-container .title {
     color: #fff;
     font-size: 23px;
@@ -11,13 +13,15 @@
     letter-spacing: 1px;
     margin: 0 0 60px;
 }
+
+/*Da estilos al formilario como el fondo y los espacios de los elementos dentro de el */
 .form-container .form-horizontal {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
-.form-horizontal .form-icon {
+/*.form-horizontal .form-icon {
     color: #fff;
     background-color: #1B394D;
     font-size: 75px;
@@ -26,7 +30,7 @@
     width: 90px;
     margin: -65px auto 10px;
     border-radius: 50%;
-}
+}*/
 .form-horizontal .form-group {
     margin: 0 0 10px;
     position: relative;
@@ -131,6 +135,7 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     transition: all 0.4s ease 0s;
 }
+/*Estilos para el boton del login*/
 .signup{
     background: transparent;
     color: #20ecdb;
@@ -197,4 +202,112 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+
+/*Mensajes de Alerta*/
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #a94442; 
+    background-color: #f2dede; 
+    border-color: #ebccd1; 
+}
+
+.alert ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+
+
+/*Estilo para el formilario que se utiliza para listar los autos*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 28px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #2D9DA7;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table td {
+    color: #333;
+    font-size: 14px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    background-color: #EC5F20;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c94e1b;
+}
+
+a {
+    display: inline-block;
+    background-color: #1B394D;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #162e3d;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: inline-block;
 }
